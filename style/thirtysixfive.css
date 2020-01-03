@@ -1,0 +1,50 @@
+a {
+  color: #669999;
+  text-decoration: none;
+}
+
+body{
+  font-family: "Lucida Console", Monaco, monospace;
+  text-align: center;
+}
+
+header {
+  color: #40bfbf;
+  background-color: #0d0d0d;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: double;
+  font-size: 25px;
+  display: block;
+  width: 100%;
+}
+
+.post {
+  width: 60%;
+  font-size: 14px;
+  text-align: left;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  margin-left: 5%;
+  margin-right: 10%;
+}
+
+.post-date {
+  text-align: center;
+}
+
+.post-nav {
+  padding: 0.5em 0.5em 0.5em 0.5em;
+  text-align: center;
+  margin-bottom: 0.3em;
+  text-decoration: underline;
+}
+
+.footer {
+  position: relative;
+  padding-top: 0.2em;
+  bottom: 0;
+  width: 100%;
+  height: 2.5rem;
+  text-align: center;
+}
