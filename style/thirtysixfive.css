@@ -4,7 +4,7 @@ a {
 }
 
 body{
-  font-family: "Lucida Console", Monaco, monospace;
+  font-family:  Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
   text-align: center;
 }
 
@@ -29,6 +29,11 @@ header {
   margin-right: 10%;
 }
 
+.post-pre {
+  font-size: 17px;
+  font-family:  Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+  line-height: 29px;
+}
 .post-date {
   text-align: center;
 }

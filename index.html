@@ -17,63 +17,66 @@
     <title>thirtysixfive.com</title>
 </head>
 <header class="active">
-    <a href="index.html">Thirty Six Five</a>
+    <a href="http://thirtysixfive.com/index.html">Thirty Six Five</a>
 </header>
 <body>
     <div class="post">
         <h1 class="post-date">Thursday, January 2, 2020</h1>
         <pre class="post-pre">
-            Today I thought I'd write a bit about how the tech behind ThirtySixFive, and the horrible atrocities I've
-            committed as a seasoned devops and software professional. First off, I want to set the scene a bit, to
-            maybe give myself a bit of credit as to why I've made the technical choices I have thus far.
+            I promised today would be something a bit more juicy, and maybe hinted that I myself would take on a greater
+            form, of the late lyrical wordsmith, Biggie Smalls.  But alas, I'm not artist, and certainly don't have the
+            skill and game that he had.  So maybe instead I'll gravitate to a spicy issue, that is more near and dear to
+            my heart. To which, I will almost certainly do a dis-justice, but he, this is America, and I'm allowed to
+            butcher things. That issue is, meteorological forecast models.
 
-            When I set out to do this challenge a lot of things came to mind on how I could make this the perfect
-            website, will all the fancy new technologies and a prim and proper CI/CD process. However, I'm also a
-            working professional who's not super pumped about doing these things in my free time. I know, you're
-            personally offended. A developer who DOESN'T want to develop on their own time? I should be ashamed of
-            myself. But honestly, the cold hard truth of it is, I'm not a 10x programmer. I'm a pretty good one.
-            I like writing code, debugging systems, and architecting durable, distributed,
-            and highly available systems (like all those sexy buzzwords?). But I also really like doing other things;
-            like spending time with my hot ass wife, or playing video games, or, ya know, enjoying the never-ending
-            beauty of Montana. So I choose to spend my time outside of work (where I spend all day programming) doing
-            those things and not programming.
+            I'll start by saying, meteorology is hard. I know what you're thinking, because I hear it all the time;
+            "But Paul, how can it be hard if they get paid to be wrong 60% of the time?"  First off, fuck you.  If you
+            honestly think that, eat shit and die, and don't read this blog anymore.  Second, expand your mind for
+            just a second and consider the breadth of the problem Meteorologists are attempting to solve.  The earth,
+            is really big.  And the atmosphere, encircles the entirety of it.  To boot, we sample a hilariously small
+            portion of that enormous space, so at any point in time, the view we have of the atmosphere is partial.
+            So what does that have to do with forecasting?  Well, if I told you to chart your way out of maze, but the
+            map I gave you, only knew 5% of the map, and the maze was constantly changing, you'd probably struggle to
+            find your way out.  That's the job of a forecaster.
 
-            Okay, so back to the softening of the blow (that feels like it just made it worse. I came to the idea
-            of this challenge while out running (as my all best ideas do).  One of the foundations of this idea was as
-            follows: Why not publish a website, that I can both blog on, and evolve technically, in the open.  SO,
-            with that in mind, I decided to get something up in super rough form (this page is nigh un-viewable in it's
-            current format). Then, in the open, and with a traceable record, I would evolve the site, and any
-            underlying tech. I have lots of ideas, but who know's exactly where I'll go from here (likely towards
-            react, because that feels like the hottness), but I'll be doing it with commits, to this <a href="somerepo">repository.</a>
+            So, we have don't have a complete picture of the current state of the atmosphere at any given time.  So
+            what do we have?  We have an incredibly detailed understanding of physics, dynamics, and how they work
+            together on our planet to create weather. Since the onset of the "Meteorological era" (considered to begin
+            largely with scientists like Carl-Gustaf Rossby in the early 1900s) we've understood a lot of the physics.
+            Now obviously our understanding of that has improved over the years, but the fundamentals havn't changed.
+            What has changed is computers, and our ability to numerical process the complex equations that describe
+            the fluid flow in the atmosphere (yes the atmosphere is a fluid).
 
-            So now you can see what I've done so far (it's literally nothing you couldn't see by clicking "view-source"),
-            but you don't know how I'm hosting this site.  That's pretty straight forward, and is the way I choose to
-            host all my sites (and have for years) that is with AWS S3.  Using a registered domain, and AWS Hosted Zone,
-            it's super easy to create a bucket, drop in some HTML/CSS/JS and having a working, highly avaialable, and fast
-            website.  Lots of people have written blogs on this subject, so I'm not going to try and re-create that here.
-            What I will do, is eventually post a Cloudformation template that could be used to re-create exactly what
-            I've done to host this website.
+            Okay, so we've increased or ability to solve the equations with computers. Cool.  We've programmed those
+            equations into what we call Forecast Models.  They take an input set of data, i.e. the current state of the
+            atmosphere, and forecast (based on solving a bunch of those fundamentals equations) the future state of the
+            atmosphere. Even if only one number in our initial state was wrong, that would introduce error, that over
+            time through the future states, amplifies and could lead to a wildly erroneous state in the future. So
+            that's problem number 1, lack of overall observations.
 
-            So, I'm architecting this out in the open, on github/AWS, and I'm hosting just using AWS S3 and AWS Route53.
-            The code, as you can clearly see by checking source, is just HTML5 and CSS.  No JS yet, and certainly no JS
-            frameworks.
+            The second problem, is simple.  The people who've spent their live studying maths, dynamics, and physics,
+            are the meteorologists.  They understand the way the atmosphere works better than anyone else.  They are
+            also usually really shitty programmers.  That's not meant to be offensive (sorry met friends, but it's true)
+            it's just a fact.  Most humans are either okay at lots of things, or REALLY REALLY good at one thing.
+            Meteorologists are REALLY good at meteorology.  They are usually okay at programming.  This, in my mind, has
+            led us to a point where models are nowhere near what they could be.
 
-            A few of the things I want to accomplish in the month of January:
-              - Purchase (and document that decision with a post) a fitness band.
-              - Integrate fitness band heart rate data into site.
-              - Include a static photo of myself each post.
-              - Re-write the page to be more dynamic and mobile friendly (probably react but who knows for sure).
-              - Convince my sister to help me create a cool logo because she's a dope ass Graphic Designer.
-              - Automate the majority of the post generation, and ensuing site changes.
+            I once  had the honor of speaking directly with the Direct of the ECMWF (largely considered to be the
+            premier forecasting agency in the world), who was visiting my senior capstone class.  During that talk, I
+            asked him how many computer scientists (i.e. people who are REALLY REALLY good at programming) they
+            employed. His response; 0.  They had hundreds of Meteorologists, 0 Computer Scientists.  That answer not
+            only perplexed me, but honestly offended me (as a student at the time of both worlds).  Why would someone
+            who specialized so deeply, and understood the deep specialized knowledge you get from that effort, assume
+            that they could do a completely separate task, that also requires a specialist?
 
-            I think most of these things are possible, we'll see though.  I think the hardest one by far will be the
-            integration of fitness data, but I think that will also hae the biggest payoff.  Imagine what I could
-            learn (or other people could learn about me) about myself with 365 days of heart rate data.  I'm not
-            entirely sure I'd make 100% of that date public, but I'm going to strongly consider it.
+            To me it's akin to asking your plumber to do heart surgery on you.  Anyway, I've done a terrible job at
+            making my point in time, and I'm out of time and really want to go to bed.  So maybe I'll re-visit this
+            tomorrow.
 
-            So that's the INCREDIBLY long winded version of why the site is the way it is, and WHAT it is.  And a
-            small preview of what's coming, though certainly a lot of it will change.  Hope you enjoy it, and
-            I'll see you tomorrow for another rant, maybe about something more juicy, like Notorious.
+            The take away here.  Forecasting groups (NWS, ECMWF) and various private agencies need to hire more
+            computer scientists.  On a final note, the company I worked for at my first job,
+            Weather Decision Technologies, did a fantastic job of this.  We had a very pleasant mix of both sciences
+            on staff.  And we made some really cool products and advances because of that. SO ya WDT.
         </pre>
     </div>  <!-- end post -->
     <div class="post-nav">

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-155235894-1"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'UA-155235894-1');
+    </script>
+    <!-- END Google Analytics -->
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style/thirtysixfive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>thirtysixfive.com</title>
+</head>
+<header class="active">
+    <a href="http://thirtysixfive.com/index.html">Thirty Six Five</a>
+</header>
+<body>
+    <div class="post">
+        <h1 class="post-date">Thursday, January 2, 2020</h1>
+        <pre class="post-pre">
+            Today I thought I'd write a bit about how the tech behind ThirtySixFive, and the horrible atrocities I've
+            committed as a seasoned devops and software professional. First off, I want to set the scene a bit, to
+            maybe give myself a bit of credit as to why I've made the technical choices I have thus far.
+
+            When I set out to do this challenge a lot of things came to mind on how I could make this the perfect
+            website, will all the fancy new technologies and a prim and proper CI/CD process. However, I'm also a
+            working professional who's not super pumped about doing these things in my free time. I know, you're
+            personally offended. A developer who DOESN'T want to develop on their own time? I should be ashamed of
+            myself. But honestly, the cold hard truth of it is, I'm not a 10x programmer. I'm a pretty good one.
+            I like writing code, debugging systems, and architecting durable, distributed,
+            and highly available systems (like all those sexy buzzwords?). But I also really like doing other things;
+            like spending time with my hot ass wife, or playing video games, or, ya know, enjoying the never-ending
+            beauty of Montana. So I choose to spend my time outside of work (where I spend all day programming) doing
+            those things and not programming.
+
+            Okay, so back to the softening of the blow (that feels like it just made it worse. I came to the idea
+            of this challenge while out running (as my all best ideas do).  One of the foundations of this idea was as
+            follows: Why not publish a website, that I can both blog on, and evolve technically, in the open.  SO,
+            with that in mind, I decided to get something up in super rough form (this page is nigh un-viewable in it's
+            current format). Then, in the open, and with a traceable record, I would evolve the site, and any
+            underlying tech. I have lots of ideas, but who know's exactly where I'll go from here (likely towards
+            react, because that feels like the hottness), but I'll be doing it with commits, to this <a href="https://github.com/Pkamis/thirtysixfive.com">repository.</a>
+
+            So now you can see what I've done so far (it's literally nothing you couldn't see by clicking "view-source"),
+            but you don't know how I'm hosting this site.  That's pretty straight forward, and is the way I choose to
+            host all my sites (and have for years) that is with AWS S3.  Using a registered domain, and AWS Hosted Zone,
+            it's super easy to create a bucket, drop in some HTML/CSS/JS and having a working, highly avaialable, and fast
+            website.  Lots of people have written blogs on this subject, so I'm not going to try and re-create that here.
+            What I will do, is eventually post a Cloudformation template that could be used to re-create exactly what
+            I've done to host this website.
+
+            So, I'm architecting this out in the open, on github/AWS, and I'm hosting just using AWS S3 and AWS Route53.
+            The code, as you can clearly see by checking source, is just HTML5 and CSS.  No JS yet, and certainly no JS
+            frameworks.
+
+            A few of the things I want to accomplish in the month of January:
+              - Purchase (and document that decision with a post) a fitness band.
+              - Integrate fitness band heart rate data into site.
+              - Include a static photo of myself each post.
+              - Re-write the page to be more dynamic and mobile friendly (probably react but who knows for sure).
+              - Convince my sister to help me create a cool logo because she's a dope ass Graphic Designer.
+              - Automate the majority of the post generation, and ensuing site changes.
+
+            I think most of these things are possible, we'll see though.  I think the hardest one by far will be the
+            integration of fitness data, but I think that will also hae the biggest payoff.  Imagine what I could
+            learn (or other people could learn about me) about myself with 365 days of heart rate data.  I'm not
+            entirely sure I'd make 100% of that date public, but I'm going to strongly consider it.
+
+            So that's the INCREDIBLY long winded version of why the site is the way it is, and WHAT it is.  And a
+            small preview of what's coming, though certainly a lot of it will change.  Hope you enjoy it, and
+            I'll see you tomorrow for another rant, maybe about something more juicy, like Notorious.
+        </pre>
+    </div>  <!-- end post -->
+    <div class="post-nav">
+        <a href="http://thirtysixfive.com/index.html">Next Post</a>
+        <a href="http://thirtysixfive.com/index.html">Latest Post</a>
+    </div>
+</body>
+<footer class="footer">You can <a href ='https://twitter.com/PKamis'>tweet me</a> or drop me an email at paul.kamis@gmail.com.</footer>
+</html>
